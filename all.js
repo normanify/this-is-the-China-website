@@ -349,6 +349,28 @@ async function f_succ(f, msSleep = 500, maxCount = 10) {
             return true;
         });
 
+
+        // change logo on top left (hide)
+        f_succ(() => {
+            let logo = document.getElementById('logo');
+            if (logo === null) {
+                return false;
+            }
+            //logo.innerHTML = bili_biglogo;
+            logo.innerHTML = ''
+            return true;
+        });
+
+        f_succ(() => {
+            let logo = document.getElementById('header')
+            if (logo === null) {
+                return false;
+            }
+            //logo.innerHTML = bili_biglogo;
+            logo.innerHTML = ''
+            return true;
+        });
+        
         // sleep(1000).then(() => {});
         // change style loop
         f_succ(() => {
